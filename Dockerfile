@@ -11,5 +11,3 @@ RUN pip install --no-cache-dir pipenv==2022.1.8 && \
     pipenv sync --dev --system
 
 COPY ./src ./src
-
-ENTRYPOINT [ "gunicorn", "src.wsgi:app" ]
