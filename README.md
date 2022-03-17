@@ -21,7 +21,7 @@ python による SOAP サーバ実装サンプル
 ## 実行
 
 - docker-compose ver.3.8 実行を想定
-- ポートは 8000 を使用
+- ポートは 80 を使用
 
 ```bash
 # コンテナ内でlocalhost:80でサーバが起動
