@@ -21,7 +21,8 @@ python による SOAP サーバ実装サンプル
 ## 実行
 
 - docker-compose ver.3.8 実行を想定
-- ポートは 80 を使用
+- ポート番号は 8080 を使用して起動
+  - コンテナ外からは http://localhost:8080/?wsdl にブラウザからアクセスすることで xml を確認できる
 
 ```bash
 # コンテナ内でlocalhost:80でサーバが起動
@@ -48,7 +49,7 @@ docker-compose exec web python src/client_sample.py
 
 - spyne
   - SOAP サーバのパッケージ
-  - http://spyne.io/#inprot=HttpRpc&outprot=JsonDocument&s=rpc&tpt=WsgiApplication&validator=true
+  - <http://spyne.io/#inprot=HttpRpc&outprot=JsonDocument&s=rpc&tpt=WsgiApplication&validator=true>
 - lxml
   - input 時に xml に対して validate する際に必要(らしい)パッケージ
 - gunicorn
@@ -58,4 +59,4 @@ docker-compose exec web python src/client_sample.py
 
 - zeep
   - SOAP クライアントパッケージ
-  - https://docs.python-zeep.org/en/master/
+  - <https://docs.python-zeep.org/en/master/>
