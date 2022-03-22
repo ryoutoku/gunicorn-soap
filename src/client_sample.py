@@ -5,7 +5,7 @@ from models import RequestParameter
 class Caller:
 
     def __init__(self):
-        wsdl_url = "http://localhost:80?wsdl"
+        wsdl_url = "http://0.0.0.0:8080/?wsdl"
         self._name = "dummy_name"
         self._times = 3
         self._client = Client(wsdl_url)

@@ -2,6 +2,13 @@ version: "3.8"
 services:
   web:
     build: .
-    command: gunicorn src.wsgi:app -b 0.0.0.0:80 
+    command: >
+      gunicorn src.wsgi:app -b 0.0.0.0:8080 
+      --workers 4 
+      --threads 2 
+      --max-requests 500 
+      --max-requests-jitter 200
+    ports:
+      - 127.0.0.1:8080:8080
     volumes:
     - ./src:/app/src
